@@ -25,24 +25,24 @@
       <h1 class="title">{{site.title}}</h1>
       <br />
       <!--Table Start-->
-      <table id="example" class="display" style="width: 100%">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Sku</th>
-            <th>Price</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-
-        <tbody>
+      <div class="container-fluid">
+        <table id="example" class="table">
+            <thead>
+                <tr>
+                    <th>Nama File</th>
+                    <th>Kategori</th>
+                    <th>Data File</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
           <!--For loop that iterates over markdown frontmatter in _databases folder-->
-          {% for database in site.dtabases %}
+          {% for database in site.databases %}
           <tr>
             <td>{{ databases.Name }}</td>
-            <td>{{ databases.Sku }}</td>
-            <td>{{ databases.Price }}</td>
-            <td>{{ databases.content | markdownify }}</td>
+            <td>{{ databases.kKategori }}</td>
+            <td>{{ databases.Data }}</td>
+            <td><a href="{{ databases.link }}"><button type="button" class="btn btn-success">Download</button></a></td>
           </tr>
           {% endfor %}
         </tbody>

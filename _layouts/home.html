@@ -35,10 +35,10 @@
           <!--For loop that iterates over markdown frontmatter in _databases folder-->
           {% for database in site.databases %}
           <tr>
-            <td>{{ databases.Name }}</td>
-            <td>{{ databases.kKategori }}</td>
-            <td>{{ databases.Data }}</td>
-            <td><a href="{{ databases.link }}"><button type="button" class="btn btn-success">Download</button></a></td>
+            <td>{{ database.Name }}</td>
+            <td>{{ database.Kategori }}</td>
+            <td>{{ database.Data }}</td>
+            <td><a href="{{ database.Link }}"><button type="button" class="btn btn-success">Download</button></a></td>
           </tr>
           {% endfor %}
         </tbody>

@@ -32,4 +32,4 @@ plugins:
 #   - vendor/ruby/
 
 collections:
-  database:
+  databases:
